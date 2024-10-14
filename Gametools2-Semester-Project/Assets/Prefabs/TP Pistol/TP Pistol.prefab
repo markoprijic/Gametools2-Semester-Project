@@ -50,10 +50,10 @@ MonoBehaviour:
   camera: {fileID: 0}
   tp_Pistol_Projectile_Prefab: {fileID: 3903954523688566593, guid: 0177df59bc1708bad83756e4c47aeba2, type: 3}
   tp_Point_Prefab: {fileID: 2634647100863643121, guid: 7a259af358209ec3ab20c30c009650de, type: 3}
-  bullet_Spawn: {fileID: 0}
-  bullet_Force: 0
-  fire_Cooldown: 0
-  bullet_Range: 0
+  bullet_Spawn: {fileID: 1688143039787107934}
+  bullet_Force: 75
+  fire_Cooldown: 2
+  bullet_Range: 20
 --- !u!1 &3198274574465102378
 GameObject:
   m_ObjectHideFlags: 0

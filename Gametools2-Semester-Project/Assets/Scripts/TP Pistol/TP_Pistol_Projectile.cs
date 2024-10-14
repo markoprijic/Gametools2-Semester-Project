@@ -8,7 +8,7 @@ public class TP_Pistol_Projectile : MonoBehaviour
     private void Awake()
     {
         player_Controller = GameObject.FindGameObjectWithTag("Player");
-        tp_Point = GameObject.FindGameObjectWithTag("TP_Point");
+        tp_Point = GameObject.FindGameObjectWithTag("TP Point");
     }
 
 
