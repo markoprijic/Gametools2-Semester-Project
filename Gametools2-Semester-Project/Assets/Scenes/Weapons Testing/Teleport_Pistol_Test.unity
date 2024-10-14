@@ -129,7 +129,6 @@ GameObject:
   - component: {fileID: 167273188}
   - component: {fileID: 167273191}
   - component: {fileID: 167273190}
-  - component: {fileID: 167273189}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -152,29 +151,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1094069239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &167273189
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167273187}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &167273190
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -503,6 +479,8 @@ GameObject:
   - component: {fileID: 1094069238}
   - component: {fileID: 1094069241}
   - component: {fileID: 1094069240}
+  - component: {fileID: 1094069243}
+  - component: {fileID: 1094069242}
   m_Layer: 0
   m_Name: Player Controller
   m_TagString: Player
@@ -587,6 +565,56 @@ MonoBehaviour:
   can_Fire: 1
   tp_Pistol_Script: {fileID: 7737813236515499099}
   tp_Pistol_Available: 1
+--- !u!136 &1094069242
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094069236}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.59
+  m_Height: 2.05
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1094069243
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094069236}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1491183953
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 812590218}
     - target: {fileID: 4949774457794042881, guid: 7b4994984f176d4849a21222abb82ece, type: 3}
       propertyPath: bullet_Force
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4949774457794042881, guid: 7b4994984f176d4849a21222abb82ece, type: 3}
       propertyPath: bullet_Range

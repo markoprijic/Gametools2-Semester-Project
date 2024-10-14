@@ -8,7 +8,7 @@ public class TP_Pistol_Projectile : MonoBehaviour
     private void Awake()
     {
         player_Controller = GameObject.FindGameObjectWithTag("Player");
-        tp_Point = GameObject.FindGameObjectWithTag("TP_Point");
+        tp_Point = GameObject.FindGameObjectWithTag("TP Point");
     }
 
 
@@ -16,6 +16,8 @@ public class TP_Pistol_Projectile : MonoBehaviour
     // In case an enemy/etc moves in the way of the bullet, blocking original path
     private void OnTriggerEnter(Collider other)
     {
+        
+        
         Debug.Log($"OnTriggerEnter2D called. other's tag was {other.tag}."); 
         if (other.tag == "Enemy" || other.tag == "TP Point")
         {
