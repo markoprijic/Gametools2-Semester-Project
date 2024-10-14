@@ -9,7 +9,8 @@ public class Gun_Controller : MonoBehaviour
 
     [SerializeField] private Teleport_Pistol tp_Pistol_Script;
     private bool tp_Pistol_Equipped;
-
+    public bool tp_Pistol_Available; // if tp_Pistol is useable in current level, for future
+    
     // not locking items out completely, just not setting equip bool to true
     // shouldnt cause issues on levels where you dont have that weapon but who knows
     
@@ -24,7 +25,7 @@ public class Gun_Controller : MonoBehaviour
     {
         if (tp_Pistol_Equipped && can_Fire)
         {
-               
+               tp_Pistol_Script.Shoot();
         }
     }
 
