@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 3169
+  controlID: 1032
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3170
+  controlID: 1033
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3245
+  controlID: 1050
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -443,10 +443,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 210}
-      m_SelectedIDs: 9ae0ffff
-      m_LastClickedID: -8038
-      m_ExpandedIDs: fcfaffff
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 9ceeffff
+      m_LastClickedID: -4452
+      m_ExpandedIDs: cefaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -966,9 +966,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 380.1918, y: -423.04315, z: 366.34787}
+    m_Target: {x: -308.6113, y: -340.89914, z: 448.9985}
     speed: 2
-    m_Value: {x: 380.1918, y: -423.04315, z: 366.34787}
+    m_Value: {x: -308.6113, y: -340.89914, z: 448.9985}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1014,20 +1014,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.32918385, y: -0.3447804, z: 0.13035199, w: -0.8696202}
+    m_Target: {x: -0.26735526, y: 0.311201, z: -0.09272455, w: -0.9075379}
     speed: 2
-    m_Value: {x: -0.32918388, y: -0.34478042, z: 0.13035199, w: -0.86962026}
+    m_Value: {x: -0.26735526, y: 0.311201, z: -0.09272455, w: -0.9075379}
   m_Size:
-    m_Target: 360.19522
+    m_Target: 321.26315
     speed: 2
-    m_Value: 360.19522
+    m_Value: 321.26315
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
     m_Speed: 1.0005
-    m_SpeedNormalized: 0.5
+    m_SpeedNormalized: 0.49999997
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -1098,7 +1098,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1108,16 +1108,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audio
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Maleeq Olanlokun\Documents\MovementGame\Gametools2-Semester-Project\Gametools2-Semester-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 86b90000
-    m_LastClickedID: 47494
-    m_ExpandedIDs: 00000000f0b6000000ca9a3b
+    m_SelectedIDs: 90bc0000
+    m_LastClickedID: 48272
+    m_ExpandedIDs: 0000000000ba000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1146,7 +1146,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f0b6000000ca9a3b
+    m_ExpandedIDs: 0000000000ba000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1283,7 +1283,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 312
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
