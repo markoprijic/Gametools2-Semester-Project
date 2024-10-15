@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7269365087529400601}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.11008909, z: -0, w: 0.99392176}
+  m_LocalRotation: {x: 0, y: -0.11008987, z: 0, w: 0.9939217}
   m_LocalPosition: {x: 0.307, y: 0, z: -0.023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   camera: {fileID: 0}
   plasma_Gun_Projectile_Prefab: {fileID: 2496183393100976695, guid: 4610ebfc4216902b99dd0a2969491e12, type: 3}
   bullet_Spawn: {fileID: 3998206693571504974}
-  knockback_Force: 500
+  knockback_Force: 750
   bullet_Force: 80
   fire_Cooldown: 2
 --- !u!1 &7998173115926845064

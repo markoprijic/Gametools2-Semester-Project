@@ -37,7 +37,7 @@ public class Plasma_Gun : MonoBehaviour
         tp_Projectile.GetComponent<Rigidbody>().AddForce(projectile_Direction * bullet_Force);
 
         // Knock player backwards
-        player_Controller.GetComponent<Rigidbody>().AddForce(-camera.transform.forward * knockback_Force);
+        player_Controller.GetComponent<Rigidbody>().AddForce(-camera.transform.forward * knockback_Force, ForceMode.Impulse);
 
         gun_Control_Script.can_Fire = false;
         Invoke("Reset_Fire", fire_Cooldown);

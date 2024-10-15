@@ -442,7 +442,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1708812013}
   total_Weapons: 2
-  current_Weapon_Roster: 
   current_Weapon_I: 0
   can_Fire: 0
   tp_Pistol: {fileID: 2073374970}
@@ -1208,6 +1207,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1708812013}
+    - target: {fileID: 2478656032435522019, guid: a3e2640ece10fc7728fd0e246603f448, type: 3}
+      propertyPath: knockback_Force
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2478656032435522019, guid: a3e2640ece10fc7728fd0e246603f448, type: 3}
       propertyPath: player_Controller
       value: 

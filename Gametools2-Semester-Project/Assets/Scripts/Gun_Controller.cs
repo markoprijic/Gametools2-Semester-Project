@@ -9,7 +9,7 @@ public class Gun_Controller : MonoBehaviour
     [SerializeField] private Camera camera;
     
     public int total_Weapons;
-    [SerializeField] private int[] current_Weapon_Roster; // array for switching  
+    //[HideInInspector] private int[] current_Weapon_Roster; // array for switching  
     public int current_Weapon_I = 0; // index for current weapon
     
     public bool can_Fire;
@@ -32,7 +32,7 @@ public class Gun_Controller : MonoBehaviour
 
     private void Start()
     {
-        current_Weapon_Roster = new int[total_Weapons];
+        //current_Weapon_Roster = new int[total_Weapons];
     
         can_Fire = true;
         Change_Weapon();
