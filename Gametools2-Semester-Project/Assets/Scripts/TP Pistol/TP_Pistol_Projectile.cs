@@ -1,6 +1,11 @@
 using System;
 using UnityEngine;
 
+interface ITP_Pistol_Damage
+{
+    void Receive_TP_Pistol_Damage();
+}
+
 public class TP_Pistol_Projectile : MonoBehaviour
 {
     [SerializeField] private GameObject player_Controller;
@@ -13,13 +18,21 @@ public class TP_Pistol_Projectile : MonoBehaviour
 
 
 
-    // In case an enemy/etc moves in the way of the bullet, blocking original path
+    
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"OnTriggerEnter2D called. other's tag was {other.tag}."); 
-        if (other.tag == "Enemy" || other.tag == "TP Point")
+        Debug.Log($"OnTriggerEnter2D called. other's tag was {other.tag}.");
+        if (other.tag == "Enemy") // In case an enemy/etc moves in the way of the bullet, blocking original path
         {
-            print("contact made");
+            ITP_Pistol_Damage enemy = other.gameObject.GetComponent<ITP_Pistol_Damage>();
+            enemy.Receive_TP_Pistol_Damage();
+            
+            TP_Player();
+            Destroy(tp_Point);
+            Destroy(gameObject);
+        }
+        else if (other.tag == "TP Point")
+        {
             TP_Player();
             Destroy(tp_Point);
             Destroy(gameObject);

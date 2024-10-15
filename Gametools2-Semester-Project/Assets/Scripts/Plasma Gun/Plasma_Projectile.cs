@@ -30,9 +30,10 @@ public class Plasma_Projectile : MonoBehaviour
     
     private void Explosion()
     {
-        //Destroy(projectile_GFX);
+        Destroy(projectile_GFX);
         // effect here
         Calculate_Hit_Targets();
+        Destroy(gameObject);
     }// end Explosion()
 
     private void Calculate_Hit_Targets()

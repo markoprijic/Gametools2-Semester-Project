@@ -155,5 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ebadea931673bbfb04c36371539a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  total_HP: 0
+  total_HP: 100
   current_HP: 0

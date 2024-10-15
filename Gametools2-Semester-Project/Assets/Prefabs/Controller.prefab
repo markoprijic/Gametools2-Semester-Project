@@ -76,4 +76,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e9550944bd1d6b891412a878eaac05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plasma_Gun_Damage: 40
+  tp_Pistol_Damage: 20
+  plasma_Gun_Damage: 50
