@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1708812013}
-  total_Weapons: 2
+  total_Weapons: 3
   current_Weapon_I: 0
   can_Fire: 0
   burst_Rifle: {fileID: 739774201}

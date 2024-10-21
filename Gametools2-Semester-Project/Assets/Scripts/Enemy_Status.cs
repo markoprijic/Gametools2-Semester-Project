@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Enemy_Status : MonoBehaviour, ITP_Pistol_Damage, IPlasma_Projectile
+public class Enemy_Status : MonoBehaviour, IBurst_Rifle_Damage, IPlasma_Projectile, ITP_Pistol_Damage
 {
     private Damage_Controller damage_Control_Script;
 
@@ -32,14 +32,18 @@ public class Enemy_Status : MonoBehaviour, ITP_Pistol_Damage, IPlasma_Projectile
     
     #region - Damage Types -
 
-    public void Receive_TP_Pistol_Damage()
+    public void Recieve_Burst_Rifle_Damage()
     {
-        Take_Damage(damage_Control_Script.tp_Pistol_Damage);
+        Take_Damage(damage_Control_Script.burst_Rifle_Damage);
     }
     
     public void Recieve_Plasma_Damage()
     {
         Take_Damage(damage_Control_Script.plasma_Gun_Damage);
+    }
+    public void Receive_TP_Pistol_Damage()
+    {
+        Take_Damage(damage_Control_Script.tp_Pistol_Damage);
     }
     
     #endregion

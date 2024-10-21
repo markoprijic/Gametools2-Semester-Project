@@ -83,7 +83,7 @@ MonoBehaviour:
   plasma_Gun_Projectile_Prefab: {fileID: 2496183393100976695, guid: 4610ebfc4216902b99dd0a2969491e12, type: 3}
   bullet_Spawn: {fileID: 3998206693571504974}
   knockback_Force: 15
-  bullet_Force: 80
+  bullet_Force: 800
   fire_Cooldown: 2
 --- !u!1001 &4984413648148162533
 PrefabInstance:

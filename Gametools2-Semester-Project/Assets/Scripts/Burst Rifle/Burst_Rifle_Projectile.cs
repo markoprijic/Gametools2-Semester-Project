@@ -1,16 +1,34 @@
+using System;
 using UnityEngine;
+
+interface IBurst_Rifle_Damage
+{
+    void Recieve_Burst_Rifle_Damage();
+}
 
 public class Burst_Rifle_Projectile : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private GameObject player_Controller;
+    
+    
+    private void Awake()
     {
-        
-    }
+        player_Controller = GameObject.FindGameObjectWithTag("Player");
+    }// end Awake()
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log($"OnTriggerEnter2D called. other's tag was {other.tag}.");
+
+        if (other.tag == "Burst Projectile")
+            return;
         
+        else if (other.tag == "Enemy")
+        {
+            IBurst_Rifle_Damage enemy = other.gameObject.GetComponent<IBurst_Rifle_Damage>();
+            enemy.Recieve_Burst_Rifle_Damage();
+        }
+        
+        Destroy(gameObject);
     }
-}
+}// end script
