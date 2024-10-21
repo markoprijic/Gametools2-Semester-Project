@@ -32,9 +32,9 @@ public class Plasma_Gun : MonoBehaviour
         Vector3 projectile_Direction = target_Point - bullet_Spawn.position;
     
         // Spawn and shoot projectile
-        GameObject tp_Projectile = Instantiate(plasma_Gun_Projectile_Prefab, bullet_Spawn.position, Quaternion.identity);
-        tp_Projectile.transform.forward = projectile_Direction.normalized;
-        tp_Projectile.GetComponent<Rigidbody>().AddForce(projectile_Direction * bullet_Force);
+        GameObject projectile = Instantiate(plasma_Gun_Projectile_Prefab, bullet_Spawn.position, Quaternion.identity);
+        projectile.transform.forward = projectile_Direction.normalized;
+        projectile.GetComponent<Rigidbody>().AddForce(projectile_Direction.normalized * bullet_Force);
 
         // Knock player backwards
         player_Controller.GetComponent<Rigidbody>().AddForce(-camera.transform.forward * knockback_Force, ForceMode.Impulse);

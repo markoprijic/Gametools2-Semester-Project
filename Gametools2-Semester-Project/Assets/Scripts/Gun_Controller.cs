@@ -20,15 +20,22 @@ public class Gun_Controller : MonoBehaviour
     
     // weapon_Avaiable bools for possible later use in level control scripts, may use something else
     
+    [Header("Burst Rifle")]
+    [SerializeField] private GameObject burst_Rifle;
+    [SerializeField] private Burst_RIfle burst_Rifle_Script;
+    public bool burst_Rifle_Available;
+    
+    [Header("Plasma Gun")] 
+    [SerializeField] private GameObject plasma_Gun;
+    [SerializeField] private Plasma_Gun plasma_Gun_Script;
+    public bool plasma_Gun_Available; 
+    
     [Header("TP Pistol")]
     [SerializeField] private GameObject tp_Pistol;
     [SerializeField] private Teleport_Pistol tp_Pistol_Script;
     public bool tp_Pistol_Available; 
 
-    [Header("Plasma Gun")] 
-    [SerializeField] private GameObject plasma_Gun;
-    [SerializeField] private Plasma_Gun plasma_Gun_Script;
-    public bool plasma_Gun_Available;
+
 
     private void Start()
     {
@@ -40,30 +47,44 @@ public class Gun_Controller : MonoBehaviour
 
     public void Change_Weapon()
     {
+        // Not sure if melee will be equipabble like this or on E key for example
+        // Grapple gun is the same case
+        
         switch (current_Weapon_I)
         {
             case 0:
                 can_Fire = true;
-                tp_Pistol.SetActive(true);
+                burst_Rifle.SetActive(true);
                 plasma_Gun.SetActive(false);
-                break;
-            
-            case 1:
-                can_Fire = true;
-                plasma_Gun.SetActive(true);
                 tp_Pistol.SetActive(false);
                 break;
-                
+            
+            case 2:
+                can_Fire = true;
+                plasma_Gun.SetActive(true);
+                burst_Rifle.SetActive(false);
+                tp_Pistol.SetActive(false);
+                break;            
+            
+            case 3:
+                can_Fire = true;
+                tp_Pistol.SetActive(true);
+                burst_Rifle.SetActive(false);
+                plasma_Gun.SetActive(false);
+                break;
         } // end switch (current_Weapon_I)
     }// end Change_Weapon()
     
     public void Shoot()
     {
-        if (tp_Pistol.activeInHierarchy && can_Fire)
-               tp_Pistol_Script.Shoot();
-        
+        if (burst_Rifle.activeInHierarchy && can_Fire)
+            burst_Rifle_Script.Shoot();
+            
         else if (plasma_Gun.activeInHierarchy && can_Fire)
             plasma_Gun_Script.Shoot();
+        
+        else if (tp_Pistol.activeInHierarchy && can_Fire)
+               tp_Pistol_Script.Shoot();        
     }// end Shoot()
 
 }
