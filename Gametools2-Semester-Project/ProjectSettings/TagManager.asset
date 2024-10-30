@@ -8,6 +8,7 @@ TagManager:
   - TP Point
   - Damage Controller
   - Burst Projectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Player Layer
+  - Obstacle Layer
   - 
   - 
   - 
