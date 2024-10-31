@@ -3,6 +3,7 @@
 
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 
@@ -17,9 +18,10 @@ public class Enemy_Movement : MonoBehaviour
     [Header("General")]
     [SerializeField] private Animator enemy_Animator;
     [SerializeField] private Enemy_FOV enemy_FOV_Script;
+    [SerializeField] private GameObject enemy_View_Rotator; // Object to manipulate rig and have enemy properly aim at player
+    
     [Header("Patrol Points - Where the enemy will move towards")]
     [SerializeField] private Transform[] patrol_Points; // Array of patrol waypoints, added in editor
-    
     
     private enum State
     {
@@ -53,6 +55,12 @@ public class Enemy_Movement : MonoBehaviour
     [SerializeField] private float wander_Duration;
     private int wander_Inc = 0; // Increment for wander_Amount;
     private float search_Timer;
+
+    [Header("Attack Options")] 
+    [SerializeField] private Enemy_Shooting shooting_Script;
+    [SerializeField] private float attack_Cooldown;
+    [SerializeField] private float attack_Range; // Range of firing at player, not range of bullets 
+    private bool can_Shoot;
     
     
     private void Start()
@@ -63,6 +71,7 @@ public class Enemy_Movement : MonoBehaviour
         search_Point_Placed = false;
         enemy_Animator.SetBool("Walking State", true);
         enemy_Nav_Agent.speed = patrol_Speed;
+        can_Shoot = true;
     }// end Start
 
     
@@ -72,7 +81,7 @@ public class Enemy_Movement : MonoBehaviour
         switch (current_State)
         {
             case State.Patrol:
-                if (enemy_Animator.GetBool("Walking State") == false)
+                /*if (enemy_Animator.GetBool("Walking State") == false)
                 {
                     enemy_Nav_Agent.speed = patrol_Speed;
                     enemy_FOV_Script.FOV_Angle = enemy_FOV_Script.temp_Searching_FOV_Angle;
@@ -80,12 +89,22 @@ public class Enemy_Movement : MonoBehaviour
                     enemy_Animator.SetBool("Chasing State", false);
                     enemy_Animator.SetBool("Idle State", false);
                     enemy_Animator.SetBool("Walking State", true);
-                }
+                }*/
                 Patrol_State();
                 break;
             
+            case State.Attack_Player:
+                Attack_Player_State();
+               /* enemy_Animator.SetBool("Walking State", false);
+                enemy_Animator.SetBool("Chasing State", false);
+                enemy_Animator.SetBool("Searching State", false);
+                enemy_Animator.SetBool("Idle State", false);
+                enemy_Animator.SetBool("Attack State", true);
+                */
+                break;   
+            
             case State.Chase_Player:
-                if (enemy_Animator.GetBool("Chasing State") == false)
+                /*if (enemy_Animator.GetBool("Chasing State") == false)
                 {
                     enemy_Nav_Agent.speed = chase_Speed;
                     enemy_FOV_Script.FOV_Angle = enemy_FOV_Script.searching_FOV_Angle;
@@ -93,36 +112,27 @@ public class Enemy_Movement : MonoBehaviour
                     enemy_Animator.SetBool("Searching State", false);
                     enemy_Animator.SetBool("Idle State", false);
                     enemy_Animator.SetBool("Chasing State", true);
-                }
+                }*/
                 Chase_Player_State();
                 break;
 
             case State.Search_For_Player:
-                if (enemy_Animator.GetBool("Searching State") == false)
+               /* if (enemy_Animator.GetBool("Searching State") == false)
                 {
                     enemy_Animator.SetBool("Chasing State", false);
                     enemy_Animator.SetBool("Idle State", false);
                     enemy_Animator.SetBool("Searching State", true);
                 } 
-                
+                */
                 Search_State();
                 break;
             
-            case State.Attack_Player:
-                enemy_Animator.SetBool("Walking State", false);
-                enemy_Animator.SetBool("Chasing State", false);
-                enemy_Animator.SetBool("Searching State", false);
-                enemy_Animator.SetBool("Idle State", false);
-                enemy_Animator.SetBool("Attack State", true);
-                
-                break;
-            
             case State.Patrol_Idle:
-                enemy_Animator.SetBool("Walking State",false);
+              /*  enemy_Animator.SetBool("Walking State",false);
                 enemy_Animator.SetBool("Chasing State",false);
                 enemy_Animator.SetBool("Searching State",false);
                 enemy_Animator.SetBool("Idle State",true);
-                
+                */
                 Idle_State();
                 break;
             
@@ -150,19 +160,42 @@ public class Enemy_Movement : MonoBehaviour
 
     }// end Patrol_State
 
-    
-    private void Idle_State()
+
+    private void Attack_Player_State()
     {
-        if (patrol_Timer >= patrol_Idle_Time)
+        if (enemy_FOV_Script.player_Visible == false)
+            Change_State(3);
+        
+        enemy_View_Rotator.transform.LookAt(player_Object.transform.position);
+/*
+        float distance_To_Player = Vector3.Distance(gameObject.transform.position, player_Object.transform.position); 
+        // check for outside of max fire range, move into range
+        if (distance_To_Player > attack_Range)
         {
-            patrol_Timer = 0;
-            target_Point = (target_Point + 1) % patrol_Points.Length;
-            Change_State(1);
+            // should in theory take the halfway point between self and player and move towards it
+            Vector3 attack_Position = (gameObject.transform.position - player_Object.transform.position) / 2;
+            Move_To_State(attack_Position);
+        }// end moving into range
+  */      
+        if (can_Shoot)
+        {
+            print("bang");
+            can_Shoot = false;
+            shooting_Script.Shoot();
+            Invoke("Reset_Attack", attack_Cooldown);
         }
-        else
-            patrol_Timer += Time.deltaTime;
-    }// end Idle_State
-    
+    }// end Attack_Player_State
+
+    private void Reset_Attack()
+    {
+        can_Shoot = true;
+    }// end Reset_Attack
+
+    // to cancel other states when moving into position
+    private void Move_To_State(Vector3 destination)
+    {
+        
+    }// end Move_To_State
     
     private void Chase_Player_State()
     {
@@ -217,7 +250,17 @@ public class Enemy_Movement : MonoBehaviour
         
     }// end Search_State
     
-    
+     private void Idle_State()
+     {
+         if (patrol_Timer >= patrol_Idle_Time)
+         {
+             patrol_Timer = 0;
+             target_Point = (target_Point + 1) % patrol_Points.Length;
+             Change_State(1);
+         }
+         else
+             patrol_Timer += Time.deltaTime;
+     }// end Idle_State   
     
     // 1 is Patrol, 2 is Chase, 3 is Search
     public void Change_State(int new_State)
@@ -225,6 +268,8 @@ public class Enemy_Movement : MonoBehaviour
         //Debug.Log(previous_State);
         if (previous_State == new_State)
             return;
+        
+        enemy_View_Rotator.transform.rotation = gameObject.transform.rotation;
         
         Debug.Log($"Changing state: {current_State}");
         
