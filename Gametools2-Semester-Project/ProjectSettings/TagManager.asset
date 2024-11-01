@@ -9,6 +9,7 @@ TagManager:
   - Damage Controller
   - Burst Projectile
   - Enemy
+  - Enemy Projectile
   layers:
   - Default
   - TransparentFX

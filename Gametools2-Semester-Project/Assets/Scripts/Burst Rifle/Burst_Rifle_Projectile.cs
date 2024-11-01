@@ -8,14 +8,6 @@ interface IBurst_Rifle_Damage
 
 public class Burst_Rifle_Projectile : MonoBehaviour
 {
-    private GameObject player_Controller;
-    
-    
-    private void Awake()
-    {
-        player_Controller = GameObject.FindGameObjectWithTag("Player");
-    }// end Awake()
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log($"OnTriggerEnter2D called. other's tag was {other.tag}.");

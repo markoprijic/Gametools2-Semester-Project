@@ -12,5 +12,8 @@ public class Damage_Controller : MonoBehaviour
     public int burst_Rifle_Damage;
     public int plasma_Gun_Damage;
     public int tp_Pistol_Damage;
-    
+
+    [Header("Enemy Weapon Damage")] 
+    public int enemy_Burst_Rifle_Damage;
+
 }

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1880469606419235750}
   m_Layer: 0
   m_Name: Foot Soldier Controller
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   view_Point: {fileID: 4782356018828208658}
-  burst_Rifle_Projectile_Prefab: {fileID: 8979086741349388929, guid: 74cb1c43c5ee659bb9f587275093b17b, type: 3}
+  burst_Rifle_Projectile_Prefab: {fileID: 1380653211247630558, guid: b57474506d3c0058799cd265be30b001, type: 3}
   bullet_Spawn: {fileID: 163042699145004661}
-  bullet_Force: 60
+  bullet_Force: 600
   burst_Cooldown: 0.15
   bullets_Per_Burst: 4
 --- !u!95 &908716537073408733

@@ -27,8 +27,6 @@ public class Enemy_Shooting : MonoBehaviour
             Shoot_Projectile();
             yield return new WaitForSeconds(burst_Cooldown);
         }
-        
-        Invoke("Reset_Fire", burst_Cooldown);
     }
 
     private void Shoot_Projectile()
