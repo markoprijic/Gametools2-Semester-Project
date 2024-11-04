@@ -36,6 +36,11 @@ public class WallRunTutorial : MonoBehaviour
             else
                 rb.AddForce(-orientation.right * wallrunForce / 5 * Time.deltaTime);
         }
+        
+        if (rb.linearVelocity.magnitude >= maxWallSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * maxWallSpeed;
+        }
     }
     private void StopWallRun()
     {
