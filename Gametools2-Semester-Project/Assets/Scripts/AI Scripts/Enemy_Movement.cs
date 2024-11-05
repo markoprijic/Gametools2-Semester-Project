@@ -178,7 +178,17 @@ public class Enemy_Movement : MonoBehaviour
         if (enemy_FOV_Script.player_Visible == false)
             Change_State(3);
         
-        gameObject.transform.LookAt(player_Object.transform.position);
+        enemy_View_Rotator.transform.LookAt(player_Object.transform.position);
+
+        Vector3 player_Direction = player_Object.transform.position - transform.position;
+        player_Direction.y = 0;
+
+        if (player_Direction.sqrMagnitude > 0.01f)
+        {
+            Quaternion target_Rotation = Quaternion.LookRotation(player_Direction);
+            transform.rotation = Quaternion.Euler(0, target_Rotation.eulerAngles.y, 0);
+        }
+        
 /*
         float distance_To_Player = Vector3.Distance(gameObject.transform.position, player_Object.transform.position); 
         // check for outside of max fire range, move into range
