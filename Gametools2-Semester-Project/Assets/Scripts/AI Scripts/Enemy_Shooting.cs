@@ -8,6 +8,7 @@ public class Enemy_Shooting : MonoBehaviour
 
     [Header("Burst Rifle")] 
     [SerializeField] private GameObject burst_Rifle_Projectile_Prefab;
+    [SerializeField] private GameObject muzzle_Flash;
     [SerializeField] private Transform bullet_Spawn;
     [SerializeField] private float bullet_Force;
     [SerializeField] private float burst_Cooldown; // Time between shots within the burst, will be very short
@@ -17,6 +18,7 @@ public class Enemy_Shooting : MonoBehaviour
     public void Shoot()
     {
         print("shooting");
+        muzzle_Flash.SetActive(false);
         StartCoroutine(Burst_Fire());
     }// end Shoot()
 
@@ -25,7 +27,9 @@ public class Enemy_Shooting : MonoBehaviour
         for (int i = 0; i < bullets_Per_Burst; i++)
         {
             Shoot_Projectile();
+            muzzle_Flash.SetActive(true);
             yield return new WaitForSeconds(burst_Cooldown);
+            muzzle_Flash.SetActive(false);
         }
     }
 

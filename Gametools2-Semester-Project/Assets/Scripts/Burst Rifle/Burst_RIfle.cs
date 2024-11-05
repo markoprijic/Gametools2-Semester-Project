@@ -10,6 +10,7 @@ public class Burst_RIfle : MonoBehaviour
 
     [Header("Burst Rifle")] 
     [SerializeField] private GameObject burst_Rifle_Projectile_Prefab;
+    [SerializeField] private GameObject muzzle_Flash;
     [SerializeField] private Transform bullet_Spawn;
     [SerializeField] private float bullet_Force;
     [SerializeField] private float fire_Cooldown; // General cooldown inbetween bursts, wont be too long as its main weapon
@@ -28,7 +29,9 @@ public class Burst_RIfle : MonoBehaviour
         for (int i = 0; i < bullets_Per_Burst; i++)
         {
             Shoot_Projectile();
+            muzzle_Flash.SetActive(true);
             yield return new WaitForSeconds(burst_Cooldown);
+            muzzle_Flash.SetActive(false);
         }
         
         Invoke("Reset_Fire", burst_Cooldown);
