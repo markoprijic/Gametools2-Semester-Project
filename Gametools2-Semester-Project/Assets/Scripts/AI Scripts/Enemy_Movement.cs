@@ -78,9 +78,7 @@ public class Enemy_Movement : MonoBehaviour
     
     private void Update()
     {
-        
-        
-        print(current_State);
+        //print(current_State);
         //Debug.Log(search_Point_Placed);
         switch (current_State)
         {
@@ -201,7 +199,6 @@ public class Enemy_Movement : MonoBehaviour
   */      
         if (can_Shoot)
         {
-            print("bang");
             can_Shoot = false;
             shooting_Script.Shoot();
             Invoke("Reset_Attack", attack_Cooldown);
