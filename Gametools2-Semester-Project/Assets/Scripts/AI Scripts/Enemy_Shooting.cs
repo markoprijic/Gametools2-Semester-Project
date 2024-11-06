@@ -9,6 +9,8 @@ public class Enemy_Shooting : MonoBehaviour
     [Header("Burst Rifle")] 
     [SerializeField] private GameObject burst_Rifle_Projectile_Prefab;
     [SerializeField] private GameObject muzzle_Flash;
+    [SerializeField] private AudioSource audio_Source;
+    [SerializeField] private AudioClip audio_Clip;
     [SerializeField] private Transform bullet_Spawn;
     [SerializeField] private float bullet_Force;
     [SerializeField] private float burst_Cooldown; // Time between shots within the burst, will be very short
@@ -28,6 +30,7 @@ public class Enemy_Shooting : MonoBehaviour
         {
             Shoot_Projectile();
             muzzle_Flash.SetActive(true);
+            audio_Source.PlayOneShot(audio_Clip);
             yield return new WaitForSeconds(burst_Cooldown);
             muzzle_Flash.SetActive(false);
         }
