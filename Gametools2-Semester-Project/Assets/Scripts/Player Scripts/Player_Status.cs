@@ -64,7 +64,7 @@ public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
         
     }// end Health_Regen()
 
-    private void Player_Death()
+    public void Player_Death()
     {
         death_Sequence = true;
     }// end Player_Death()

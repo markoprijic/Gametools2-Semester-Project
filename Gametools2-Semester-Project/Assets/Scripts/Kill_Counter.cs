@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class Kill_Counter : MonoBehaviour
 {
+    [SerializeField] private Lvl1_Victory victory_Script;
+    
     private int total_Enemies = 0;
     [HideInInspector] public int total_Kills = 0;
     
@@ -21,7 +23,7 @@ public class Kill_Counter : MonoBehaviour
         
         if (total_Kills >= total_Enemies)
         {
-            // victory sequence
+            victory_Script.Victory_Condition_Met();
         }
     }
     
