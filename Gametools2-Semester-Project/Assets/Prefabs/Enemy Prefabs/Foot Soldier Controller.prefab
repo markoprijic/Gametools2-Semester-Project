@@ -96,7 +96,6 @@ MonoBehaviour:
   patrol_Points:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   patrol_Speed: 3.5
   patrol_Idle_Time: 4
   chase_Speed: 6
@@ -195,10 +194,10 @@ MonoBehaviour:
   enemy_Movement_Script: {fileID: 7235300445630024666}
   target_Mask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 12288
   obstacle_Mask:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 16384
   last_Player_Location: {x: 0, y: 0, z: 0}
   player_Ref: {fileID: 0}
   player_Visible: 0

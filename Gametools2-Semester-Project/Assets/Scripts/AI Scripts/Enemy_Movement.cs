@@ -92,7 +92,7 @@ public class Enemy_Movement : MonoBehaviour
                 {
                     enemy_Nav_Agent.speed = patrol_Speed;
                     enemy_FOV_Script.FOV_Angle = enemy_FOV_Script.temp_Searching_FOV_Angle;
-                    enemy_Animator.SetBool("Searching State", false);
+                    //enemy_Animator.SetBool("Searching State", false);
                     //enemy_Animator.SetBool("Chasing State", false);
                     enemy_Animator.SetBool("Idle State", false);
                     enemy_Animator.SetBool("Walking State", true);
@@ -106,7 +106,7 @@ public class Enemy_Movement : MonoBehaviour
                 {
                     enemy_Animator.SetBool("Walking State", false);
                     //enemy_Animator.SetBool("Chasing State", false);
-                    enemy_Animator.SetBool("Searching State", false);
+                    //enemy_Animator.SetBool("Searching State", false);
                     enemy_Animator.SetBool("Idle State", false);
                     enemy_Animator.SetBool("Attack State", true);
                 }
@@ -119,7 +119,7 @@ public class Enemy_Movement : MonoBehaviour
                     enemy_Nav_Agent.speed = chase_Speed;
                     enemy_FOV_Script.FOV_Angle = enemy_FOV_Script.searching_FOV_Angle;
                     enemy_Animator.SetBool("Walking State", true);
-                    enemy_Animator.SetBool("Searching State", false);
+                    //enemy_Animator.SetBool("Searching State", false);
                     enemy_Animator.SetBool("Idle State", false);
                    // enemy_Animator.SetBool("Chasing State", true);
                 }
@@ -143,7 +143,7 @@ public class Enemy_Movement : MonoBehaviour
                 {
                     enemy_Animator.SetBool("Walking State", false);
                     //enemy_Animator.SetBool("Chasing State", false);
-                    enemy_Animator.SetBool("Searching State", false);
+                    //enemy_Animator.SetBool("Searching State", false);
                     enemy_Animator.SetBool("Idle State", true);
                     enemy_Animator.SetBool("Attack State", false);
                 }   
@@ -157,7 +157,7 @@ public class Enemy_Movement : MonoBehaviour
                     enemy_Animator.SetBool("Dying State", true);
                     enemy_Animator.SetBool("Walking State", false);
                     //enemy_Animator.SetBool("Chasing State", false);
-                    enemy_Animator.SetBool("Searching State", false);
+                    //enemy_Animator.SetBool("Searching State", false);
                     enemy_Animator.SetBool("Idle State", false);
                     enemy_Animator.SetBool("Attack State", false);
                 }
@@ -321,7 +321,7 @@ public class Enemy_Movement : MonoBehaviour
         
         enemy_View_Rotator.transform.rotation = gameObject.transform.rotation;
         
-        Debug.Log($"Changing state: {current_State}");
+        //Debug.Log($"Changing state: {current_State}");
         
         if (new_State == 1)
             current_State = State.Patrol;
