@@ -67,6 +67,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"audio "
+	"audio listener"
 ]
 searchItemFavorites = [
 ]

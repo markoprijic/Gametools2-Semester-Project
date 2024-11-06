@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WallRunTutorial : MonoBehaviour
@@ -67,6 +69,7 @@ public class WallRunTutorial : MonoBehaviour
     [Header("Assignables")]
     public Transform playerCam;
     public Transform orientation;
+    public Transform playerPosition;
 
     //Other
     private Rigidbody rb;
@@ -132,6 +135,13 @@ public class WallRunTutorial : MonoBehaviour
     public bool disableGravity = false;
     public bool resetVel = true;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource walkSound;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource slideSound;
+    [SerializeField] private AudioClip[] walkAudios;
+
     private void Dash()
     {
         if (dashCdTimer > 0) return;
@@ -139,6 +149,7 @@ public class WallRunTutorial : MonoBehaviour
 
         dashing = true;
         maxYSpeed = maxDashYSpeed;
+        jumpSound.Play();
 
         Transform forwardT;
 
@@ -264,6 +275,7 @@ public class WallRunTutorial : MonoBehaviour
         //Double Jumping
         if (Input.GetButtonDown("Jump") && !grounded && doubleJumpsLeft >= 1)
         {
+            jumpSound.Play();
             Jump();
             doubleJumpsLeft--;
         }
