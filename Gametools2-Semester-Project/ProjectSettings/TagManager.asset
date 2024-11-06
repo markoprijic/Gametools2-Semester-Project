@@ -5,8 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
-  - TP Point
-  - Damage Controller
+  - Wall
   - Enemy
   layers:
   - Default
@@ -16,9 +15,9 @@ TagManager:
   - Water
   - UI
   - Ground
-  - Wallrun
-  - Damageable
-  - 
+  - wallLayer
+  - Enemy
+  - ladderLayer
   - 
   - 
   - 
