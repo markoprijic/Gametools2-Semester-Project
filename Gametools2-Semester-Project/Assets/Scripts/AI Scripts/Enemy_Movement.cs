@@ -68,6 +68,7 @@ public class Enemy_Movement : MonoBehaviour
     private bool can_Shoot;
 
     [HideInInspector] public bool has_Died = false;
+    private bool stop_Dying = false; // fix for looping
     
     private void Start()
     {
@@ -304,6 +305,7 @@ public class Enemy_Movement : MonoBehaviour
      {
          if (has_Died)
          {
+             
              enemy_FOV_Script.enabled = false;
              enemy_Status_Script.enabled = false;
              current_Script.enabled = false;

@@ -8,6 +8,10 @@ TagManager:
   - Wall
   - Enemy
   - Enemy Projectile
+  - Burst Projectile
+  - Damage Controller
+  - FxTemporaire
+  - Kill Counter
   layers:
   - Default
   - TransparentFX
@@ -24,8 +28,6 @@ TagManager:
   - 
   - Player Layer
   - Obstacle Layer
-  - 
-  - 
   - 
   - 
   - 
