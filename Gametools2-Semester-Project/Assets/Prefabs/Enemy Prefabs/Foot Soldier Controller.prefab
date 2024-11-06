@@ -201,7 +201,7 @@ MonoBehaviour:
   last_Player_Location: {x: 0, y: 0, z: 0}
   player_Ref: {fileID: 0}
   player_Visible: 0
-  FOV_Radius: 25
+  FOV_Radius: 70
   FOV_Angle: 110
   searching_FOV_Angle: 360
   temp_Searching_FOV_Angle: 0

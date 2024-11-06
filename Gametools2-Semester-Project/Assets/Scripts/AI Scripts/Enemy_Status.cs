@@ -28,6 +28,7 @@ public class Enemy_Status : MonoBehaviour, IBurst_Rifle_Damage, IPlasma_Projecti
     private void Take_Damage(int incoming_Damage)
     {
         current_HP -= incoming_Damage;
+        movement_Script.Change_State(4); // attack player on being damaged
         //Debug.Log($"Damage recieved, current health: {current_HP}");
     }
     
