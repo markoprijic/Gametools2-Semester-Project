@@ -6,6 +6,7 @@ public class Enemy_Status : MonoBehaviour, IBurst_Rifle_Damage, IPlasma_Projecti
     private Damage_Controller damage_Control_Script;
 
     [Header("General")] 
+    [SerializeField] private Enemy_Movement movement_Script;
     [SerializeField] private int total_HP;
     public int current_HP;
     
@@ -20,14 +21,14 @@ public class Enemy_Status : MonoBehaviour, IBurst_Rifle_Damage, IPlasma_Projecti
     {
         if (current_HP <= 0)
         {
-            Destroy(gameObject);
+            movement_Script.Change_State(6);
         }
     }
     
     private void Take_Damage(int incoming_Damage)
     {
         current_HP -= incoming_Damage;
-        Debug.Log($"Damage recieved, current health: {current_HP}");
+        //Debug.Log($"Damage recieved, current health: {current_HP}");
     }
     
     #region - Damage Types -

@@ -15,9 +15,11 @@ public class Enemy_Movement : MonoBehaviour
     
     // For if I reuse and don't hardcode
     //public String[] enemy_Animator_Bool;
-    [Header("General")]
+    [Header("General")] 
     [SerializeField] private Animator enemy_Animator;
+    [SerializeField] private Enemy_Movement current_Script;
     [SerializeField] private Enemy_FOV enemy_FOV_Script;
+    [SerializeField] private Enemy_Status enemy_Status_Script;
     [SerializeField] private GameObject enemy_View_Rotator; // Object to manipulate rig and have enemy properly aim at player
     [SerializeField] private GameObject enemy_Rig_Spine; // cant child spine to enemy_View_Rotator, this is a work around
     
@@ -35,7 +37,9 @@ public class Enemy_Movement : MonoBehaviour
         // When enemy reaches player
         Attack_Player,
         // Standing between walking to patrol points
-        Patrol_Idle
+        Patrol_Idle,
+        
+        Death
     }
     
     private State current_State = State.Patrol;
@@ -62,7 +66,8 @@ public class Enemy_Movement : MonoBehaviour
     [SerializeField] private float attack_Cooldown;
     [SerializeField] private float attack_Range; // Range of firing at player, not range of bullets 
     private bool can_Shoot;
-    
+
+    [HideInInspector] public bool has_Died = false;
     
     private void Start()
     {
@@ -144,6 +149,20 @@ public class Enemy_Movement : MonoBehaviour
                 }   
                 
                 Idle_State();
+                break;
+            
+            case State.Death:
+                if (enemy_Animator.GetBool("Dying State") == false)
+                {
+                    enemy_Animator.SetBool("Dying State", true);
+                    enemy_Animator.SetBool("Walking State", false);
+                    //enemy_Animator.SetBool("Chasing State", false);
+                    enemy_Animator.SetBool("Searching State", false);
+                    enemy_Animator.SetBool("Idle State", false);
+                    enemy_Animator.SetBool("Attack State", false);
+                }
+                
+                Death_State();
                 break;
             
         }// end State switch
@@ -280,7 +299,19 @@ public class Enemy_Movement : MonoBehaviour
          else
              patrol_Timer += Time.deltaTime;
      }// end Idle_State   
-    
+
+     private void Death_State()
+     {
+         if (has_Died)
+         {
+             enemy_FOV_Script.enabled = false;
+             enemy_Status_Script.enabled = false;
+             current_Script.enabled = false;
+         }
+     }// end Death_State()
+
+
+     
     // 1 is Patrol, 2 is Chase, 3 is Search
     public void Change_State(int new_State)
     {
@@ -306,6 +337,9 @@ public class Enemy_Movement : MonoBehaviour
 
         if (new_State == 5)
             current_State = State.Patrol_Idle;
+
+        if (new_State == 6)
+            current_State = State.Death;
         
         previous_State = new_State;
     }// end Change_States

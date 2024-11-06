@@ -35,8 +35,6 @@ public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
         start_Sequence = true;
         death_Sequence = false;
         fade_Transparancy = black_Screen.color;
-        
-        
     }
 
     private void Update()
@@ -75,8 +73,6 @@ public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
     {
         if (start_Sequence == true && black_Screen.color.a >= 0)
         {
-            
-            
             fade_Transparancy.a -= fade_Speed * Time.deltaTime;
             black_Screen.color = fade_Transparancy;
             
@@ -104,7 +100,7 @@ public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
                 }
             }
         }
-    }
+    }// end Fading_Screen()
     
     #region --- Incoming Damage ---
     
