@@ -69,6 +69,7 @@ public class WallRunTutorial : MonoBehaviour
     [Header("Assignables")]
     public Transform playerCam;
     public Transform orientation;
+    public Transform playerPosition;
 
     //Other
     private Rigidbody rb;
@@ -148,6 +149,7 @@ public class WallRunTutorial : MonoBehaviour
 
         dashing = true;
         maxYSpeed = maxDashYSpeed;
+        jumpSound.Play();
 
         Transform forwardT;
 
@@ -248,7 +250,6 @@ public class WallRunTutorial : MonoBehaviour
         WallRunInput();
 
         if (Input.GetKeyDown(dashKey))
-            //play dash audio
             Dash();
 
         if (dashCdTimer > 0)
