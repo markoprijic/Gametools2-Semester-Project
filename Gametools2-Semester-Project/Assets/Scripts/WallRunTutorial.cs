@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WallRunTutorial : MonoBehaviour
@@ -132,6 +134,13 @@ public class WallRunTutorial : MonoBehaviour
     public bool disableGravity = false;
     public bool resetVel = true;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource walkSound;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource slideSound;
+    [SerializeField] private AudioClip[] walkAudios;
+
     private void Dash()
     {
         if (dashCdTimer > 0) return;
@@ -239,6 +248,7 @@ public class WallRunTutorial : MonoBehaviour
         WallRunInput();
 
         if (Input.GetKeyDown(dashKey))
+            //play dash audio
             Dash();
 
         if (dashCdTimer > 0)
@@ -264,6 +274,7 @@ public class WallRunTutorial : MonoBehaviour
         //Double Jumping
         if (Input.GetButtonDown("Jump") && !grounded && doubleJumpsLeft >= 1)
         {
+            jumpSound.Play();
             Jump();
             doubleJumpsLeft--;
         }

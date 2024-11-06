@@ -5805,6 +5805,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2641106890263832187, guid: d3d7e60fc48e62749a9025c6f1aa5fd0, type: 3}
   m_PrefabInstance: {fileID: 530920266}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &345958914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 225911801146684474, guid: 44eac7959108e7743980229de94e8f8c, type: 3}
+  m_PrefabInstance: {fileID: 1584481380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &352778566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18243,7 +18248,7 @@ PrefabInstance:
     - target: {fileID: 5898017994555968328, guid: 517294db6be775847b652d8baa07db64, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2032653983}
+      objectReference: {fileID: 345958914}
     - target: {fileID: 7654257109122003829, guid: 517294db6be775847b652d8baa07db64, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -25829,25 +25834,9 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6817509946849169215, guid: 44eac7959108e7743980229de94e8f8c, type: 3}
-      propertyPath: grounded
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6817509946849169215, guid: 44eac7959108e7743980229de94e8f8c, type: 3}
-      propertyPath: jumpForce
-      value: 221.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6817509946849169215, guid: 44eac7959108e7743980229de94e8f8c, type: 3}
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1701706105}
-    - target: {fileID: 6817509946849169215, guid: 44eac7959108e7743980229de94e8f8c, type: 3}
-      propertyPath: slideForce
-      value: 1288.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6817509946849169215, guid: 44eac7959108e7743980229de94e8f8c, type: 3}
-      propertyPath: useCameraForward
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33911,11 +33900,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 143617526}
   m_SourcePrefab: {fileID: 100100000, guid: 4835a6657e57ded45b7a7fe2c2d62822, type: 3}
---- !u!4 &2032653983 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2292805664411556459, guid: 44eac7959108e7743980229de94e8f8c, type: 3}
-  m_PrefabInstance: {fileID: 1584481380}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2046901728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100092, guid: 4835a6657e57ded45b7a7fe2c2d62822, type: 3}
