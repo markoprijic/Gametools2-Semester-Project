@@ -40,7 +40,7 @@ public class Teleport_Pistol : MonoBehaviour
         // Spawn and shoot projectile
         GameObject tp_Projectile = Instantiate(tp_Pistol_Projectile_Prefab, bullet_Spawn.position, Quaternion.identity);
         tp_Projectile.transform.forward = projectile_Direction.normalized;
-        tp_Projectile.GetComponent<Rigidbody>().AddForce(projectile_Direction * bullet_Force);
+        tp_Projectile.GetComponent<Rigidbody>().AddForce(projectile_Direction.normalized * bullet_Force);
 
         gun_Control_Script.can_Fire = false;
         Invoke("Reset_Fire", fire_Cooldown);
