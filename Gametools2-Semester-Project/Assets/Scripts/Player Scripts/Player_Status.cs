@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
 {
@@ -15,13 +16,38 @@ public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
     [SerializeField] private float regen_Rate;
     [SerializeField] private float regen_Delay;
 
+    [Header("Scene Transition")] 
+    [SerializeField] private Material black_Screen;
+    [Range(0, 1)] 
+    [SerializeField] private float fade_Speed;
+    [SerializeField] private bool start_Sequence;
+    [SerializeField] private bool death_Sequence;
+
+    private Color fade_Transparancy;
+    
+    
+    private void Start()
+    {
+        Color reset_Colour = black_Screen.color;
+        reset_Colour.a = 1;
+        black_Screen.color = reset_Colour;
+        
+        start_Sequence = true;
+        death_Sequence = false;
+        fade_Transparancy = black_Screen.color;
+        
+        
+    }
+
     private void Update()
     {
+        Fading_Screen();
+        
         health_Bar.value = health * 0.01f; // value is 0 to 1
         
         if (health <= 0)
         {
-            print("Player Dead");
+            Player_Death();
         }
         else if (health > 100)
             health = 100;
@@ -39,6 +65,46 @@ public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
         }
         
     }// end Health_Regen()
+
+    private void Player_Death()
+    {
+        death_Sequence = true;
+    }// end Player_Death()
+
+    private void Fading_Screen()
+    {
+        if (start_Sequence == true && black_Screen.color.a >= 0)
+        {
+            
+            
+            fade_Transparancy.a -= fade_Speed * Time.deltaTime;
+            black_Screen.color = fade_Transparancy;
+            
+            if (black_Screen.color.a == 0)
+            {
+                start_Sequence = false;
+            }
+        }
+
+        if (death_Sequence == true)
+        {
+            start_Sequence = false;
+            //print("buh");
+            if (black_Screen.color.a <= 1)
+            {
+                //print("ah");
+
+                fade_Transparancy.a += fade_Speed * Time.deltaTime;
+                black_Screen.color = fade_Transparancy;
+
+                if (black_Screen.color.a >= 1)
+                {
+                    death_Sequence = false;
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
+            }
+        }
+    }
     
     #region --- Incoming Damage ---
     
