@@ -1617,10 +1617,6 @@ PrefabInstance:
       value: Foot Soldier Controller
       objectReference: {fileID: 0}
     - target: {fileID: 7235300445630024666, guid: 09257ee44e86411f590eda82075f5649, type: 3}
-      propertyPath: patrol_Points.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235300445630024666, guid: 09257ee44e86411f590eda82075f5649, type: 3}
       propertyPath: 'patrol_Points.Array.data[0]'
       value: 
       objectReference: {fileID: 1170866135}

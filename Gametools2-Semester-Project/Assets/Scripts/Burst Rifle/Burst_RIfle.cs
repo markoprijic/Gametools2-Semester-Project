@@ -11,6 +11,8 @@ public class Burst_RIfle : MonoBehaviour
     [Header("Burst Rifle")] 
     [SerializeField] private GameObject burst_Rifle_Projectile_Prefab;
     [SerializeField] private GameObject muzzle_Flash;
+    [SerializeField] private AudioSource audio_Source;
+    [SerializeField] private AudioClip audio_Clip;
     [SerializeField] private Transform bullet_Spawn;
     [SerializeField] private float bullet_Force;
     [SerializeField] private float fire_Cooldown; // General cooldown inbetween bursts, wont be too long as its main weapon
@@ -30,6 +32,7 @@ public class Burst_RIfle : MonoBehaviour
         {
             Shoot_Projectile();
             muzzle_Flash.SetActive(true);
+            audio_Source.PlayOneShot(audio_Clip);
             yield return new WaitForSeconds(burst_Cooldown);
             muzzle_Flash.SetActive(false);
         }
