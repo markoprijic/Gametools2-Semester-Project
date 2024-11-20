@@ -8,6 +8,7 @@ public class Enemy_Status : MonoBehaviour, IBurst_Rifle_Damage, IPlasma_Projecti
     [Header("General")] 
     [SerializeField] private Enemy_Movement movement_Script;
     [SerializeField] private int total_HP;
+    private Collider collider;
     public int current_HP;
     
     private void Start()
@@ -15,6 +16,7 @@ public class Enemy_Status : MonoBehaviour, IBurst_Rifle_Damage, IPlasma_Projecti
         GameObject controller = GameObject.FindGameObjectWithTag("Damage Controller");
         damage_Control_Script = controller.GetComponent<Damage_Controller>();
         current_HP = total_HP;
+        collider = GetComponent<Collider>();
     }
 
     private void Update()
@@ -22,6 +24,7 @@ public class Enemy_Status : MonoBehaviour, IBurst_Rifle_Damage, IPlasma_Projecti
         if (current_HP <= 0)
         {
             movement_Script.Change_State(6);
+            collider.enabled = false;
         }
     }
     
