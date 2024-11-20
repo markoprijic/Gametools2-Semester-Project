@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5989560019405260200}
   - component: {fileID: 668140282745396425}
   - component: {fileID: 4581964672822202312}
+  - component: {fileID: 3309977936607669965}
   - component: {fileID: 6817509946849169215}
   - component: {fileID: 6639980460936360213}
   m_Layer: 13
@@ -204,6 +205,20 @@ MonoBehaviour:
   tp_Pistol: {fileID: 8318155646047905089}
   tp_Pistol_Script: {fileID: 2054107918339812799}
   tp_Pistol_Available: 0
+--- !u!114 &3309977936607669965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917338861172828171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbd8814ded927b15a059a04734d026f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactor_Source: {fileID: 7834206816957328133}
+  interact_Range: 5
 --- !u!114 &6817509946849169215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +241,7 @@ MonoBehaviour:
   wallRunCameraTilt: 0.057870418
   playerCam: {fileID: 5303678380476309734}
   orientation: {fileID: 4399727353420543525}
+  playerPosition: {fileID: 0}
   moveSpeed: 3000
   maxSpeed: 13
   grounded: 1
@@ -259,6 +275,11 @@ MonoBehaviour:
   allowAllDirections: 1
   disableGravity: 0
   resetVel: 1
+  walkSound: {fileID: 0}
+  jumpSound: {fileID: 0}
+  dashSound: {fileID: 0}
+  slideSound: {fileID: 0}
+  walkAudios: []
 --- !u!114 &6639980460936360213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +489,11 @@ MonoBehaviour:
 --- !u!82 &7369366209634509784 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4088944595724821578, guid: 517294db6be775847b652d8baa07db64, type: 3}
+  m_PrefabInstance: {fileID: 6844318011535804306}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7834206816957328133 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3621834596419185815, guid: 517294db6be775847b652d8baa07db64, type: 3}
   m_PrefabInstance: {fileID: 6844318011535804306}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8318155646047905089 stripped

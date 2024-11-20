@@ -35,8 +35,7 @@ public class Gun_Controller : MonoBehaviour
     [SerializeField] private Teleport_Pistol tp_Pistol_Script;
     public bool tp_Pistol_Available; 
 
-
-
+    
     private void Start()
     {
         //current_Weapon_Roster = new int[total_Weapons];
@@ -47,6 +46,8 @@ public class Gun_Controller : MonoBehaviour
 
     public void Change_Weapon()
     {
+
+        
         // Not sure if melee will be equipabble like this or on E key for example
         // Grapple gun is the same case
         
