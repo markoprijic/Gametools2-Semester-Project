@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,23 +13,21 @@ public class Player_Controller : MonoBehaviour
         actionMap = new InputActionMap();
     }
 
-    // Update is called once per frame
-
-    private void OnPrevious()
+    private void OnItem_1()
     {
-        gun_Control_Script.current_Weapon_I--;
-        if (gun_Control_Script.current_Weapon_I < 0)
-            gun_Control_Script.current_Weapon_I = gun_Control_Script.total_Weapons;
-        
+        gun_Control_Script.current_Weapon_I = 0;
         gun_Control_Script.Change_Weapon();
     }
 
-    private void OnNext()
+    private void OnItem_2()
     {
-        gun_Control_Script.current_Weapon_I++;
-        if (gun_Control_Script.current_Weapon_I > gun_Control_Script.total_Weapons)
-            gun_Control_Script.current_Weapon_I = 0;
-        
+        gun_Control_Script.current_Weapon_I = 2;
+        gun_Control_Script.Change_Weapon();
+    }
+
+    private void OnItem_3()
+    {
+        gun_Control_Script.current_Weapon_I = 3;
         gun_Control_Script.Change_Weapon();
     }
     
