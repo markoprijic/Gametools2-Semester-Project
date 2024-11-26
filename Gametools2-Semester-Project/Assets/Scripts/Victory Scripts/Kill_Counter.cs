@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Kill_Counter : MonoBehaviour
 {
-    [SerializeField] private Lvl1_Victory victory_Script;
+    [SerializeField] private Victory_Manager victory_Script;
     
     private int total_Enemies = 0;
     [HideInInspector] public int total_Kills = 0;
