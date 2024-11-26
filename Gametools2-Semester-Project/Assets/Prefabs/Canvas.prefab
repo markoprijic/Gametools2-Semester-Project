@@ -189,7 +189,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1603471969189756009, guid: d3c0de27a34388647b6bd55898c82c59, type: 3}
       propertyPath: m_Name
-      value: GunSign
+      value: Crosshair
       objectReference: {fileID: 0}
     - target: {fileID: 1603471969189756010, guid: d3c0de27a34388647b6bd55898c82c59, type: 3}
       propertyPath: m_Pivot.x
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3381418468200185080, guid: 102099d4b0d2a994ba20e1693f407897, type: 3}
       propertyPath: m_Name
-      value: Outline4
+      value: HP Bar
       objectReference: {fileID: 0}
     - target: {fileID: 3381418468200185087, guid: 102099d4b0d2a994ba20e1693f407897, type: 3}
       propertyPath: m_Pivot.x

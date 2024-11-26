@@ -7,6 +7,7 @@ public class Lvl3_Victory : MonoBehaviour
     [SerializeField] private GameObject final_Door;
     [HideInInspector] public int key_Total = 0;
     [HideInInspector] public bool total_Kills_Reached = false;
+    
     private bool end_Door_Opened = false;
 
     private void Update()
