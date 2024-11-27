@@ -32,6 +32,7 @@ Transform:
   - {fileID: 3021598054643078626}
   - {fileID: 4932376272531921359}
   - {fileID: 7861901212184658679}
+  - {fileID: 4070174277827524302}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2366276944316050120
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 2388e8870d3a44e0b8640b5169ceb087, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a371d5c8f5830ca5faa3ac050140c4a1, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &3113712863161701067
 GameObject:
@@ -142,6 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a493a9cd7fcdd2958bf64a9376a5cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  victory_Script: {fileID: 3342398283917692083}
+  total_Enemies: 0
   total_Kills: 0
 --- !u!1 &6739013349641066577
 GameObject:
@@ -191,3 +194,49 @@ MonoBehaviour:
   plasma_Gun_Damage: 50
   tp_Pistol_Damage: 20
   enemy_Burst_Rifle_Damage: 20
+--- !u!1 &7225224833528598568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4070174277827524302}
+  - component: {fileID: 3342398283917692083}
+  m_Layer: 0
+  m_Name: Victory Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4070174277827524302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7225224833528598568}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997506892428606996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3342398283917692083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7225224833528598568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923ca658c87e0ec658a4f777843cca6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  final_Door: {fileID: 0}
+  no_Door: 1

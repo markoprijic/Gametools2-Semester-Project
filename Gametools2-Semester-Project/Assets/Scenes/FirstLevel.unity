@@ -13413,52 +13413,17 @@ Transform:
   - {fileID: 129683468}
   m_Father: {fileID: 1136663352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &756315738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 756315739}
-  - component: {fileID: 756315740}
-  m_Layer: 0
-  m_Name: Victory Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &756315739
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756315738}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1485846244}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &756315740
+--- !u!114 &756315740 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3342398283917692083, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
+  m_PrefabInstance: {fileID: 1953578631}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756315738}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 923ca658c87e0ec658a4f777843cca6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  final_Door: {fileID: 1597630583}
-  no_Door: 1
 --- !u!1001 &765006001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23908,11 +23873,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 723547069}
   m_SourcePrefab: {fileID: 100100000, guid: a35c43ed8a4013b4fb40b938e414ff25, type: 3}
---- !u!4 &1485846244 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 997506892428606996, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
-  m_PrefabInstance: {fileID: 1953578631}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1487523716
 GameObject:
   m_ObjectHideFlags: 0
@@ -32816,10 +32776,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 674446149448679897, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
-      propertyPath: victory_Script
-      value: 
-      objectReference: {fileID: 756315740}
     - target: {fileID: 997506892428606996, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.641861
@@ -32864,16 +32820,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 5995858156880334973, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
-      propertyPath: m_NavMeshData
+    - target: {fileID: 3342398283917692083, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
+      propertyPath: final_Door
       value: 
-      objectReference: {fileID: 23800000, guid: a371d5c8f5830ca5faa3ac050140c4a1, type: 2}
+      objectReference: {fileID: 1597630583}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 997506892428606996, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 756315739}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75383647cce337c4cbc08d36cb42d08b, type: 3}
 --- !u!1 &1961040044 stripped
