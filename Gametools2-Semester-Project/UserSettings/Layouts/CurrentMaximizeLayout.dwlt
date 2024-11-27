@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 67880
+  controlID: 76706
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -96,7 +96,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -191,10 +191,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 642}
-      m_SelectedIDs: 0a58feff
-      m_LastClickedID: -108534
-      m_ExpandedIDs: 2656ffffb8b8ffffd4c0fffff2d6fffffafaffff0ab000005ced0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b8b8ffffd4c0fffff2d6fffffafaffff0ab000005ced0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 67881
+  controlID: 76707
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -264,8 +264,8 @@ MonoBehaviour:
     y: 0
     width: 1318
     height: 548
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -767,9 +767,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -68.51897, y: 145.97656, z: -48.92599}
+    m_Target: {x: 13.433416, y: 178.69775, z: -90.1829}
     speed: 2
-    m_Value: {x: -68.51897, y: 145.97656, z: -48.92599}
+    m_Value: {x: 13.433416, y: 178.69775, z: -90.1829}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -815,13 +815,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.1339187, y: -0.6641927, z: 0.11942611, w: 0.72633183}
+    m_Target: {x: 0.041308887, y: -0.96172017, z: 0.18974124, w: 0.19580902}
     speed: 2
-    m_Value: {x: 0.13385804, y: -0.6638918, z: 0.119372, w: 0.72600275}
+    m_Value: {x: 0.041573603, y: -0.9609666, z: 0.18958855, w: 0.19715725}
   m_Size:
-    m_Target: 40.91764
+    m_Target: 8.926761
     speed: 2
-    m_Value: 40.91764
+    m_Value: 8.926761
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -839,7 +839,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.09975903, y: 0.72558415, z: -0.10766575, w: 0.6723023}
+  m_LastSceneViewRotation: {x: -0.01332224, y: -0.9498876, z: 0.30998668, w: -0.048915237}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 7}
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 67882
+  controlID: 76767
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -1026,7 +1026,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Art
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1036,15 +1036,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Art
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Maleeq Olanlokun\Desktop\dEFIANTNWWWW\Gametools2-Semester-Project\Gametools2-Semester-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 54b90000
-    m_LastClickedID: 47444
+    m_SelectedIDs: 9abb0000
+    m_LastClickedID: 48026
     m_ExpandedIDs: 0000000054b9000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1100,9 +1100,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0a58feff
-    m_LastClickedInstanceID: -108534
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 32180100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1242,7 +1242,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -105082
+  m_LastSelectedObjectID: -108534
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
