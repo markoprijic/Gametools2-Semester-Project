@@ -350,10 +350,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 2292805664411556459}
     m_Modifications:
     - target: {fileID: 799989208289978164, guid: 517294db6be775847b652d8baa07db64, type: 3}
-      propertyPath: knockback_Force
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 799989208289978164, guid: 517294db6be775847b652d8baa07db64, type: 3}
       propertyPath: player_Controller
       value: 
       objectReference: {fileID: 5917338861172828171}
