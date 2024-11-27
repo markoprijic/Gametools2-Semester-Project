@@ -6,9 +6,11 @@ using UnityEngine.UIElements;
 public class Kill_Counter : MonoBehaviour
 {
     [SerializeField] private Victory_Manager victory_Script;
+   
     
-    private int total_Enemies = 0;
-    [HideInInspector] public int total_Kills = 0;
+    [Header("DO NOT CHANGE")]
+    [SerializeField] private int total_Enemies = 0;
+    public int total_Kills = 0;
     
     
     private void Start()

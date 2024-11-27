@@ -67,13 +67,15 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"h: tag=<$list:Enemy, [Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground, Wall, Enemy, Enemy Projectile, Burst Projectile, Damage Controller, FxTemporaire, Kill Counter, TP Point], AssetLabelIcon, #EBD05FFF$>"
+	"h: tag=<$list:Enemy, [Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground, Wall, Enemy, Enemy Projectile, Burst Projectile, Damage Controller, FxTemporaire, Kill Counter, TP Point], AssetLabelIcon, #EBD05FFF$> Enemy"
 	"audio "
 	"audio listener"
 ]
 searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
-showSavedSearchPanel = false
+showSavedSearchPanel = true
 hideTabs = false
 expandedQueries = [
 ]
