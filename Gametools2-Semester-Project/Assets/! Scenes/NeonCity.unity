@@ -35326,6 +35326,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4581964672822202312, guid: e38a8aabe3b7d18b296ec2d5c2f2a9b4, type: 3}
+      propertyPath: plasma_Gun_Available
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5917338861172828171, guid: e38a8aabe3b7d18b296ec2d5c2f2a9b4, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -50952,7 +50956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1736933201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -73175,8 +73179,8 @@ SceneRoots:
   - {fileID: 1362049938}
   - {fileID: 1718741337}
   - {fileID: 6371555741137960819}
-  - {fileID: 1972531526}
+  - {fileID: 938052149}
   - {fileID: 1430207165}
+  - {fileID: 1972531526}
   - {fileID: 1000290529}
   - {fileID: 1573248288}
-  - {fileID: 938052149}

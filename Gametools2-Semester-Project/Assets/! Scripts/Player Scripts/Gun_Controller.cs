@@ -23,7 +23,6 @@ public class Gun_Controller : MonoBehaviour
     [Header("Burst Rifle")]
     [SerializeField] private GameObject burst_Rifle;
     [SerializeField] private Burst_RIfle burst_Rifle_Script;
-    public bool burst_Rifle_Available;
     
     [Header("Plasma Gun")] 
     [SerializeField] private GameObject plasma_Gun;

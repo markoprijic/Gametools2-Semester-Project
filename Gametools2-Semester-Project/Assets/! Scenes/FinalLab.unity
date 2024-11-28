@@ -3311,6 +3311,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4581964672822202312, guid: e38a8aabe3b7d18b296ec2d5c2f2a9b4, type: 3}
+      propertyPath: tp_Pistol_Available
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581964672822202312, guid: e38a8aabe3b7d18b296ec2d5c2f2a9b4, type: 3}
+      propertyPath: plasma_Gun_Available
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5917338861172828171, guid: e38a8aabe3b7d18b296ec2d5c2f2a9b4, type: 3}
       propertyPath: m_Name
       value: Player 1

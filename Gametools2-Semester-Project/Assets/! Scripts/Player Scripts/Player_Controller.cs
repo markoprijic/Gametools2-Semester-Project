@@ -21,12 +21,14 @@ public class Player_Controller : MonoBehaviour
 
     private void OnItem_2()
     {
+        if (gun_Control_Script.plasma_Gun_Available == false) return;
         gun_Control_Script.current_Weapon_I = 2;
         gun_Control_Script.Change_Weapon();
     }
 
     private void OnItem_3()
     {
+        if (gun_Control_Script.tp_Pistol_Available == false) return;
         gun_Control_Script.current_Weapon_I = 3;
         gun_Control_Script.Change_Weapon();
     }
