@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/! Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Main_Menu.unity
+    path: Assets/! Scenes/Main_Menu.unity
     guid: 078fd9f471921d5218fffba056ab0ee5
   - enabled: 0
-    path: Assets/Scenes/LabLevel1.unity
+    path: Assets/! Scenes/LabLevel1.unity
     guid: 44d8979c5a8bd18438f296292bc67f55
   - enabled: 1
-    path: Assets/Scenes/FirstLevel.unity
+    path: Assets/! Scenes/FirstLevel.unity
     guid: 3a6d8e4deed6aed3a91eecf924552f94
   - enabled: 1
-    path: Assets/Scenes/NeonCity.unity
+    path: Assets/! Scenes/NeonCity.unity
     guid: e09ab2eef3704ac4fbfb70c9f59ce2d4
   - enabled: 1
-    path: Assets/Scenes/FinalLab.unity
+    path: Assets/! Scenes/FinalLab.unity
     guid: 25d5f0101700f05458b784deb65a27a5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
