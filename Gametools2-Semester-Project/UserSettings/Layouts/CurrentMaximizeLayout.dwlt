@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 97
+  controlID: 1543
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -96,7 +96,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -192,9 +192,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: bed20000
-      m_LastClickedID: 53950
-      m_ExpandedIDs: b261ffff526fffff3ea9ffffdea9ffff52e2ffffa4f6fffffafaffffd2d2000004d30000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 4443fdfff044fdff047cfdff2c8ffdffded5fdfff8d5fdff3cddfdffdadefdffee15feff1629feffc86ffeffe26ffeff0c77feffaa78fefff4affeff22c3feffda09fffff809ffff4e0dffff9649ffff045cffffb261ffff526fffff3ea9ffffdea9ffff52e2ffffa4f6fffffafaffffd2d2000004d30000a4290100a8290100da290100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 98
+  controlID: 1544
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 99
+  controlID: 1610
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -1075,7 +1075,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000076b00000
+    m_ExpandedIDs: 0000000076b0000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1101,8 +1101,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: bed20000
-    m_LastClickedInstanceID: 53950
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 32180100aad70000
     m_RenameOverlay:
@@ -1243,7 +1243,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -37522
+  m_LastSelectedObjectID: 53950
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
