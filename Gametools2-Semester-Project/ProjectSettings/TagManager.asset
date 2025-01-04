@@ -2,8 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Ground
+  - Wall
+  - Enemy
+  - Enemy Projectile
+  - Burst Projectile
+  - Damage Controller
+  - FxTemporaire
+  - Kill Counter
   layers:
   - Default
   - TransparentFX
@@ -11,15 +19,15 @@ TagManager:
   - 
   - Water
   - UI
+  - Ground
+  - wallLayer
+  - Enemy
+  - ladderLayer
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player Layer
+  - Obstacle Layer
   - 
   - 
   - 
@@ -50,27 +58,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
