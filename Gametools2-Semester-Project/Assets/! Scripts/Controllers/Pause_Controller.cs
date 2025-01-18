@@ -41,5 +41,11 @@ public class Pause_Controller : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }// end Game_Unpaused()
      
-     
+     public void Unpaused()
+    {
+        Time.timeScale = 1f;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }// end Game_Unpaused()
+    
 }// end script
