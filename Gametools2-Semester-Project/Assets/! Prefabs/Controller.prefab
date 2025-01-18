@@ -34,6 +34,8 @@ Transform:
   - {fileID: 7861901212184658679}
   - {fileID: 4070174277827524302}
   - {fileID: 8218721864271820070}
+  - {fileID: 8457694327778806393}
+  - {fileID: 4574252197318812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2366276944316050120
@@ -98,7 +100,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: a371d5c8f5830ca5faa3ac050140c4a1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 350c40fa83d5590e89ee1fe633cdc426, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &2412710447301777202
 GameObject:
@@ -145,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause_Menu: {fileID: 0}
+  hp_Bar: {fileID: 0}
+  crosshair: {fileID: 0}
 --- !u!1 &3113712863161701067
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7861901212184658679
 Transform:
   m_ObjectHideFlags: 0
@@ -189,9 +193,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a493a9cd7fcdd2958bf64a9376a5cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victory_Script: {fileID: 3342398283917692083}
+  victory_Script: {fileID: 9017555071843923834}
   total_Enemies: 0
   total_Kills: 0
+--- !u!1 &5295326906057649891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8457694327778806393}
+  - component: {fileID: 430676675015549197}
+  m_Layer: 0
+  m_Name: Time Control
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8457694327778806393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5295326906057649891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997506892428606996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430676675015549197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5295326906057649891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02aec78953eb87741a5c89f6b1fa8543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowdownFactor: 0.5
+  slowdownDuration: 5
+--- !u!1 &6635634005336011762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4574252197318812}
+  - component: {fileID: 9017555071843923834}
+  m_Layer: 0
+  m_Name: Victory Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4574252197318812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635634005336011762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997506892428606996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9017555071843923834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635634005336011762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923ca658c87e0ec658a4f777843cca6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  final_Door: {fileID: 0}
+  no_Door: 1
 --- !u!1 &6739013349641066577
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4070174277827524302
 Transform:
   m_ObjectHideFlags: 0
@@ -285,4 +381,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   final_Door: {fileID: 0}
-  no_Door: 1
+  no_Door: 0

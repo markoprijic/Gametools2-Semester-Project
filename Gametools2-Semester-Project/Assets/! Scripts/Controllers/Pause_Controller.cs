@@ -31,7 +31,7 @@ public class Pause_Controller : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }// end Game_Paused()
 
-    private void Game_Unpaused()
+    public void Game_Unpaused()
     {
         pause_Menu.SetActive(false);
         hp_Bar.SetActive(true);
@@ -40,5 +40,6 @@ public class Pause_Controller : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }// end Game_Unpaused()
-    
+     
+     
 }// end script

@@ -12,7 +12,7 @@ public class Player_Status : MonoBehaviour, IEnemy_Burst_Damage
     [SerializeField] Slider health_Bar;
     
     [Header("Player Health")]
-    [SerializeField] private float health = 100;
+    [SerializeField] public float health = 100;
     [SerializeField] private float regen_Rate;
     [SerializeField] private float regen_Delay;
 

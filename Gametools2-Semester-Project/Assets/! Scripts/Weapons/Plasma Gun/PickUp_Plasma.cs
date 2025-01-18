@@ -5,7 +5,6 @@ public class PickUp_Plasma : MonoBehaviour, IInteractable
 {
     private Gun_Controller gun_Control_Script;
 
-    
     private void Start()
     {
         gun_Control_Script = GameObject.FindGameObjectWithTag("Player").GetComponent<Gun_Controller>();
