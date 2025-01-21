@@ -12,6 +12,7 @@ TagManager:
   - Damage Controller
   - FxTemporaire
   - Kill Counter
+  - TP Point
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - wallLayer
   - Enemy
   - ladderLayer
-  - 
+  - NavMesh
   - 
   - 
   - Player Layer

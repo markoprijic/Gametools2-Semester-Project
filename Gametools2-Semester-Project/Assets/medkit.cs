@@ -26,8 +26,13 @@ public class medkit : MonoBehaviour
             // Check if the object entering the trigger has the specified tag
             if (other.CompareTag("Player"))
             {
-                playerStatusScript.health += healAmount;
-                Destroy(gameObject);
+                if (playerStatusScript.health < 100)
+                {
+                    playerStatusScript.health += healAmount;
+                    Destroy(gameObject);
+                }
+                
+                
             }
 
         }
